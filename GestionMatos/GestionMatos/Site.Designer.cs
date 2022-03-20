@@ -99,7 +99,6 @@ namespace GestionMatos
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(50, 26);
             this.textBox5.TabIndex = 5;
-            this.textBox5.Visible = false;
             // 
             // errorProvider1
             // 

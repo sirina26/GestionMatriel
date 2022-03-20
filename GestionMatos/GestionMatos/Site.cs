@@ -17,6 +17,7 @@ namespace GestionMatos
         {
             InitializeComponent();
         }
+        List<int> listeId = new List<int>();
         SqlConn Sql = new SqlConn();
 
         void FillListBox()
@@ -27,7 +28,7 @@ namespace GestionMatos
             SqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-
+                //listeId.Add((int)reader["idSite"]);
                 listBox1.Items.Add(reader["nomSite"]);
                 //listBox1.Items.Add(string.Format("{0} | {1}", reader["idSite"], reader["nomSite"]));
             }
@@ -47,6 +48,8 @@ namespace GestionMatos
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selected = ((ListBox)sender).SelectedItem.ToString();
+            //int siri = listeId [listBox1.Items.IndexOf(selected) + 1 ];
+
             int ss = listBox1.Items.IndexOf(selected)+1; 
             
             string query = $"select * from Site where idSite='{ss}'";
@@ -55,12 +58,12 @@ namespace GestionMatos
             SqlDataReader reader = cmd.ExecuteReader();
             if (reader != null)
             {
-                reader.Read();
+                reader.Read();                
+                textBox5.Text = reader["idSite"].ToString();
                 textBox1.Text = reader["nomSite"].ToString();
                 textBox2.Text = reader["departementSite"].ToString();
                 textBox3.Text = reader["CPSite"].ToString();
                 textBox4.Text = reader["adresseSite"].ToString();
-                textBox5.Text = reader["idSite"].ToString();
 
             }
             Sql.disconnect();
@@ -136,7 +139,7 @@ namespace GestionMatos
             }
             if (Verif())
             {
-                string query = $"delete c from Site where idSite='{textBox5.Text}';";
+                string query = $"delete from Site where idSite={textBox5.Text};";
                 Sql.Connect();
                 SqlCommand cmd = new SqlCommand(query, Sql.Conn);
                 cmd.ExecuteNonQuery();

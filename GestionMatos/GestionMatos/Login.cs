@@ -24,5 +24,10 @@ namespace GestionMatos
             SqlCommand cmd = new SqlCommand("select * from Site", Sql.Conn);
             SqlDataReader reader = cmd.ExecuteReader();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -22,5 +22,5 @@ C:\2éme année global\DEV\gererMateriel\GestionMatos\GestionMatos\GestionMatos\
 C:\2éme année global\DEV\gererMateriel\GestionMatos\GestionMatos\GestionMatos\obj\Debug\GestionMatos.pdb
 C:\2éme année global\DEV\gererMateriel\GestionMatos\GestionMatos\GestionMatos\obj\Debug\GestionMatos.Materiel.resources
 C:\2éme année global\DEV\gererMateriel\GestionMatos\GestionMatos\GestionMatos\obj\Debug\GestionMatos.Site.resources
-C:\2éme année global\DEV\gererMateriel\GestionMatos\GestionMatos\GestionMatos\obj\Debug\GestionMatos.csproj.AssemblyReference.cache
 C:\2éme année global\DEV\gererMateriel\GestionMatos\GestionMatos\GestionMatos\obj\Debug\GestionMatos.Login.resources
+C:\2éme année global\DEV\gererMateriel\GestionMatos\GestionMatos\GestionMatos\obj\Debug\GestionMatos.csproj.AssemblyReference.cache
