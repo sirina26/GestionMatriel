@@ -56,13 +56,13 @@ namespace GestionMatos
             this.listBox1.Location = new System.Drawing.Point(18, 18);
             this.listBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(254, 384);
+            this.listBox1.Size = new System.Drawing.Size(338, 384);
             this.listBox1.TabIndex = 0;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(374, 17);
+            this.textBox1.Location = new System.Drawing.Point(459, 37);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(282, 26);
@@ -72,7 +72,7 @@ namespace GestionMatos
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(284, 22);
+            this.label1.Location = new System.Drawing.Point(369, 42);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 20);
@@ -82,7 +82,7 @@ namespace GestionMatos
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(284, 83);
+            this.label2.Location = new System.Drawing.Point(369, 103);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 20);
@@ -91,7 +91,7 @@ namespace GestionMatos
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(374, 78);
+            this.textBox2.Location = new System.Drawing.Point(459, 98);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(282, 26);
@@ -100,7 +100,7 @@ namespace GestionMatos
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(284, 149);
+            this.label3.Location = new System.Drawing.Point(369, 169);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 20);
@@ -109,7 +109,7 @@ namespace GestionMatos
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(374, 145);
+            this.textBox3.Location = new System.Drawing.Point(459, 165);
             this.textBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(282, 26);
@@ -117,7 +117,7 @@ namespace GestionMatos
             // 
             // btnAjouter
             // 
-            this.btnAjouter.Location = new System.Drawing.Point(288, 201);
+            this.btnAjouter.Location = new System.Drawing.Point(373, 221);
             this.btnAjouter.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAjouter.Name = "btnAjouter";
             this.btnAjouter.Size = new System.Drawing.Size(112, 35);
@@ -128,7 +128,7 @@ namespace GestionMatos
             // 
             // btnModifier
             // 
-            this.btnModifier.Location = new System.Drawing.Point(424, 201);
+            this.btnModifier.Location = new System.Drawing.Point(509, 221);
             this.btnModifier.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnModifier.Name = "btnModifier";
             this.btnModifier.Size = new System.Drawing.Size(112, 35);
@@ -139,7 +139,7 @@ namespace GestionMatos
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(564, 201);
+            this.button3.Location = new System.Drawing.Point(649, 221);
             this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(112, 35);
@@ -162,7 +162,7 @@ namespace GestionMatos
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(576, 244);
+            this.textBox4.Location = new System.Drawing.Point(661, 264);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 26);
             this.textBox4.TabIndex = 10;
@@ -172,7 +172,7 @@ namespace GestionMatos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(733, 504);
+            this.ClientSize = new System.Drawing.Size(973, 504);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btnModifier);

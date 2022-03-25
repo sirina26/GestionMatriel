@@ -18,16 +18,10 @@ namespace GestionMatos
             Console.WriteLine(this.Size.Width);
             Console.WriteLine(this.Size.Height);
             Console.WriteLine(Screen.PrimaryScreen.Bounds.Width);
+
         }
 
-        private void clientsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Clients c = new Clients();
-            c.MdiParent = this;
-            c.Dock = DockStyle.Fill;
-            c.Show();
-        }
-
+       
         private void matérielToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //Materiel m = new Materiel();
@@ -52,6 +46,7 @@ namespace GestionMatos
         private void clientToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Clients c = new Clients();
+            this.IsMdiContainer = true;
             c.MdiParent = this;
             c.Dock = DockStyle.Fill;
             c.Show();
@@ -59,12 +54,17 @@ namespace GestionMatos
 
         private void typeToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
+            Login l = new Login();
+            this.IsMdiContainer = true;
+            l.MdiParent = this;
+            l.Dock = DockStyle.Fill;
+            l.Show();
         }
 
         private void matérielToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Materiel m = new Materiel();
+            this.IsMdiContainer = true;
             m.MdiParent = this;
             m.Dock = DockStyle.Fill;
             m.Show();
@@ -78,6 +78,7 @@ namespace GestionMatos
         private void siteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Site c = new Site();
+            this.IsMdiContainer = true;
             c.MdiParent = this;
             c.Dock = DockStyle.Fill;
             c.Show();

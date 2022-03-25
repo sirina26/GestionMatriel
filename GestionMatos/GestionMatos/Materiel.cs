@@ -28,11 +28,11 @@ namespace GestionMatos
         private void Materiel_Load(object sender, EventArgs e)
         {
             Sql.Connect();
-            SqlDataAdapter sda = new SqlDataAdapter("Select * From Materiel", Sql.Conn);
+            SqlDataAdapter sda = new SqlDataAdapter("Select idMat, nomMat, nSerieMat, MTBFMat ,Date_Installation From Materiel", Sql.Conn);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             dataGridView1.DataSource = dt;
-
+           
             Sql.disconnect();
         }
 
@@ -49,6 +49,17 @@ namespace GestionMatos
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+            if (e.RowIndex >= 0)
+            {
+                //gets a collection that contains all the rows
+                DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
+                //populate the textbox from specific value of the coordinates of column and row.
+                textBox1.Text = row.Cells[1].Value.ToString();
+                textBox2.Text = row.Cells[2].Value.ToString();
+                textBox3.Text = row.Cells[3].Value.ToString();
+                ///textBox4.Text = row.Cells[5].Value.ToString();
+                dateTimePicker1.Text = row.Cells[4].Value.ToString();
+            }
         }
 
     }
