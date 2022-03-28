@@ -72,7 +72,11 @@ namespace GestionMatos
 
         private void Principale_Load(object sender, EventArgs e)
         {
-
+            Clients c = new Clients();
+            this.IsMdiContainer = true;
+            c.MdiParent = this;
+            c.Dock = DockStyle.Fill;
+            c.Show();
         }
 
         private void siteToolStripMenuItem_Click(object sender, EventArgs e)

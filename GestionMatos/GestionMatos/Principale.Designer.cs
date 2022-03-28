@@ -50,6 +50,7 @@ namespace GestionMatos
             this.interventionToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.menuStrip1.Size = new System.Drawing.Size(632, 36);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
@@ -57,35 +58,35 @@ namespace GestionMatos
             // clientToolStripMenuItem
             // 
             this.clientToolStripMenuItem.Name = "clientToolStripMenuItem";
-            this.clientToolStripMenuItem.Size = new System.Drawing.Size(72, 32);
+            this.clientToolStripMenuItem.Size = new System.Drawing.Size(72, 30);
             this.clientToolStripMenuItem.Text = "Client";
             this.clientToolStripMenuItem.Click += new System.EventHandler(this.clientToolStripMenuItem_Click);
             // 
             // typeToolStripMenuItem1
             // 
             this.typeToolStripMenuItem1.Name = "typeToolStripMenuItem1";
-            this.typeToolStripMenuItem1.Size = new System.Drawing.Size(65, 32);
+            this.typeToolStripMenuItem1.Size = new System.Drawing.Size(65, 30);
             this.typeToolStripMenuItem1.Text = "Type";
             this.typeToolStripMenuItem1.Click += new System.EventHandler(this.typeToolStripMenuItem1_Click);
             // 
             // siteToolStripMenuItem
             // 
             this.siteToolStripMenuItem.Name = "siteToolStripMenuItem";
-            this.siteToolStripMenuItem.Size = new System.Drawing.Size(57, 32);
+            this.siteToolStripMenuItem.Size = new System.Drawing.Size(57, 30);
             this.siteToolStripMenuItem.Text = "Site";
             this.siteToolStripMenuItem.Click += new System.EventHandler(this.siteToolStripMenuItem_Click);
             // 
             // matérielToolStripMenuItem1
             // 
             this.matérielToolStripMenuItem1.Name = "matérielToolStripMenuItem1";
-            this.matérielToolStripMenuItem1.Size = new System.Drawing.Size(91, 32);
+            this.matérielToolStripMenuItem1.Size = new System.Drawing.Size(91, 30);
             this.matérielToolStripMenuItem1.Text = "Matériel";
             this.matérielToolStripMenuItem1.Click += new System.EventHandler(this.matérielToolStripMenuItem1_Click);
             // 
             // interventionToolStripMenuItem1
             // 
             this.interventionToolStripMenuItem1.Name = "interventionToolStripMenuItem1";
-            this.interventionToolStripMenuItem1.Size = new System.Drawing.Size(123, 32);
+            this.interventionToolStripMenuItem1.Size = new System.Drawing.Size(123, 30);
             this.interventionToolStripMenuItem1.Text = "Intervention";
             // 
             // Principale

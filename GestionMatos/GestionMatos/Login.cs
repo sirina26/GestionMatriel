@@ -26,14 +26,13 @@ namespace GestionMatos
                 Sql.Connect();
                 string pw = this.Hash(textBox2.Text);
                 SqlCommand cmd = new SqlCommand("select * from [GestionMatosDB].[dbo].[User] Where loginUser=@user and passwordUser='"+pw+"'", Sql.Conn);
-                //SqlCommand cmd = new SqlCommand("select * from [GestionMatosDB].[dbo].[User] Where loginUser=@user and passwordUser=@pw", Sql.Conn);
                 cmd.Parameters.AddWithValue("@user", textBox1.Text); 
-                //cmd.Parameters.AddWithValue(this.Hash("@pw"), textBox2.Text);
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.HasRows == true)
                 {
                     MessageBox.Show("Vous êtes connecté");
-                    this.Hide();
+                    Log l = new Log();
+                    l.Close();
                     var p = new Principale();
                     p.Show();
                 }
