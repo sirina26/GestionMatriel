@@ -36,11 +36,12 @@ namespace GestionMatos
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(174, 250);
+            this.button1.Location = new System.Drawing.Point(181, 298);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(175, 35);
             this.button1.TabIndex = 0;
@@ -50,7 +51,7 @@ namespace GestionMatos
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(373, 250);
+            this.button2.Location = new System.Drawing.Point(380, 298);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(175, 35);
             this.button2.TabIndex = 1;
@@ -60,7 +61,7 @@ namespace GestionMatos
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(174, 52);
+            this.textBox1.Location = new System.Drawing.Point(181, 100);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(388, 26);
             this.textBox1.TabIndex = 2;
@@ -68,7 +69,7 @@ namespace GestionMatos
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(174, 136);
+            this.textBox2.Location = new System.Drawing.Point(181, 184);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(388, 26);
             this.textBox2.TabIndex = 3;
@@ -77,7 +78,7 @@ namespace GestionMatos
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 55);
+            this.label1.Location = new System.Drawing.Point(45, 103);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 20);
             this.label1.TabIndex = 4;
@@ -86,7 +87,7 @@ namespace GestionMatos
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(38, 142);
+            this.label2.Location = new System.Drawing.Point(45, 190);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(113, 20);
             this.label2.TabIndex = 5;
@@ -95,7 +96,7 @@ namespace GestionMatos
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(174, 190);
+            this.checkBox1.Location = new System.Drawing.Point(181, 238);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(190, 24);
             this.checkBox1.TabIndex = 6;
@@ -103,11 +104,22 @@ namespace GestionMatos
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(207, 23);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(189, 40);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Connexion";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(654, 348);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -133,5 +145,6 @@ namespace GestionMatos
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label label4;
     }
 }

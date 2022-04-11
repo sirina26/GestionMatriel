@@ -31,8 +31,8 @@ namespace GestionMatos
                 if (reader.HasRows == true)
                 {
                     MessageBox.Show("Vous êtes connecté");
-                    Log l = new Log();
-                    l.Close();
+                    this.ParentForm.Hide();
+
                     var p = new Principale();
                     p.Show();
                 }

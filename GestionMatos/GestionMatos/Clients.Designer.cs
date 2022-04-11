@@ -162,9 +162,9 @@ namespace GestionMatos
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(661, 264);
+            this.textBox4.Location = new System.Drawing.Point(751, 264);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 26);
+            this.textBox4.Size = new System.Drawing.Size(10, 26);
             this.textBox4.TabIndex = 10;
             this.textBox4.Visible = false;
             // 

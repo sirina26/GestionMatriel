@@ -52,15 +52,17 @@ namespace GestionMatos
             // 
             // connectionToolStripMenuItem
             // 
+            this.connectionToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
             this.connectionToolStripMenuItem.Name = "connectionToolStripMenuItem";
-            this.connectionToolStripMenuItem.Size = new System.Drawing.Size(118, 32);
+            this.connectionToolStripMenuItem.Size = new System.Drawing.Size(118, 29);
             this.connectionToolStripMenuItem.Text = "Connection";
             this.connectionToolStripMenuItem.Click += new System.EventHandler(this.connectionToolStripMenuItem_Click);
             // 
             // inscriptionToolStripMenuItem
             // 
+            this.inscriptionToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.inscriptionToolStripMenuItem.Name = "inscriptionToolStripMenuItem";
-            this.inscriptionToolStripMenuItem.Size = new System.Drawing.Size(111, 32);
+            this.inscriptionToolStripMenuItem.Size = new System.Drawing.Size(111, 29);
             this.inscriptionToolStripMenuItem.Text = "Inscription";
             this.inscriptionToolStripMenuItem.Click += new System.EventHandler(this.inscriptionToolStripMenuItem_Click);
             // 

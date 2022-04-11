@@ -56,7 +56,7 @@ namespace GestionMatos
             }
             Sql.disconnect();
         }
-        bool Verif()
+        public bool Verif()
         {
             string nomCl = textBox1.Text;
             string mailCl = textBox2.Text;

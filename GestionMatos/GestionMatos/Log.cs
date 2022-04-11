@@ -28,6 +28,9 @@ namespace GestionMatos
 
         private void connectionToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            inscriptionToolStripMenuItem.BackColor = SystemColors.Control;
+            connectionToolStripMenuItem.BackColor = SystemColors.ControlDark;
+
             Login l = new Login();
             this.IsMdiContainer = true;
             l.MdiParent = this;
@@ -35,8 +38,14 @@ namespace GestionMatos
             l.Show();
         }
 
+        
+        private void inscriptionToolStripMenuItem_MouseHover(object sender, EventArgs e)
+        {
+        }
         private void inscriptionToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            connectionToolStripMenuItem.BackColor = SystemColors.Control;
+            inscriptionToolStripMenuItem.BackColor = SystemColors.ControlDark;
             Inscription i = new Inscription();
             this.IsMdiContainer = true;
             i.MdiParent = this;
