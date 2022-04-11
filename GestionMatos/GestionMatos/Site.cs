@@ -28,9 +28,7 @@ namespace GestionMatos
             SqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                //listeId.Add((int)reader["idSite"]);
-                listBox1.Items.Add(reader["nomSite"]);
-                //listBox1.Items.Add(string.Format("{0} | {1}", reader["idSite"], reader["nomSite"]));
+                listBox1.Items.Add(string.Format("{0} | {1} \t {2}", reader["idSite"], reader["nomSite"], reader["departementSite"]));
             }
 
             Sql.disconnect();
@@ -49,8 +47,9 @@ namespace GestionMatos
         {
             string selected = ((ListBox)sender).SelectedItem.ToString();
             //int siri = listeId [listBox1.Items.IndexOf(selected) + 1 ];
-
-            int ss = listBox1.Items.IndexOf(selected)+1; 
+            string[] s = selected.Split('|');
+            int ss= Convert.ToInt32(s[0]);
+            //int ss = listBox1.Items.IndexOf(selected)+1; 
             
             string query = $"select * from Site where idSite='{ss}'";
             Sql.Connect();

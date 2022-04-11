@@ -19,7 +19,10 @@ namespace GestionMatos
             SqlCommand cmd = new SqlCommand("select * from Client", Sql.Conn);
             SqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
-                listBox1.Items.Add(reader["nomClient"]);
+            {
+                listBox1.Items.Add(string.Format("{0} | {1} \t {2}", reader["idClient"], reader["nomClient"], reader["mailClient"]));
+            }
+            
             Sql.disconnect();
         }
         private void Clients_Load(object sender, EventArgs e)
@@ -36,7 +39,10 @@ namespace GestionMatos
         {
             lastItem();
             string selected = ((ListBox)sender).SelectedItem.ToString();
-            string query = $"select * from Client where nomClient='{selected}'";
+            string[] s = selected.Split('|');
+            int ss = Convert.ToInt32(s[0]);
+
+            string query = $"select * from Client where idClient={ss}";
             Sql.Connect();
             SqlCommand cmd = new SqlCommand(query, Sql.Conn);
             SqlDataReader reader = cmd.ExecuteReader();
@@ -50,7 +56,7 @@ namespace GestionMatos
             }
             Sql.disconnect();
         }
-        bool Verif()
+        public bool Verif()
         {
             string nomCl = textBox1.Text;
             string mailCl = textBox2.Text;

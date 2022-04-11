@@ -40,7 +40,6 @@ namespace GestionMatos
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.clientToolStripMenuItem,
@@ -50,15 +49,19 @@ namespace GestionMatos
             this.interventionToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1001, 33);
+            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.menuStrip1.Size = new System.Drawing.Size(1061, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
+            this.menuStrip1.BackColorChanged += new System.EventHandler(this.Parametre_Click);
             // 
             // clientToolStripMenuItem
             // 
+            this.clientToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
             this.clientToolStripMenuItem.Name = "clientToolStripMenuItem";
-            this.clientToolStripMenuItem.Size = new System.Drawing.Size(72, 29);
-            this.clientToolStripMenuItem.Text = "Client";
+            this.clientToolStripMenuItem.Size = new System.Drawing.Size(69, 29);
+            this.clientToolStripMenuItem.Text = "client";
             this.clientToolStripMenuItem.Click += new System.EventHandler(this.clientToolStripMenuItem_Click);
             // 
             // typeToolStripMenuItem1
@@ -77,6 +80,7 @@ namespace GestionMatos
             // 
             // matérielToolStripMenuItem1
             // 
+            this.matérielToolStripMenuItem1.BackColor = System.Drawing.SystemColors.Control;
             this.matérielToolStripMenuItem1.Name = "matérielToolStripMenuItem1";
             this.matérielToolStripMenuItem1.Size = new System.Drawing.Size(91, 29);
             this.matérielToolStripMenuItem1.Text = "Matériel";
@@ -87,17 +91,20 @@ namespace GestionMatos
             this.interventionToolStripMenuItem1.Name = "interventionToolStripMenuItem1";
             this.interventionToolStripMenuItem1.Size = new System.Drawing.Size(123, 29);
             this.interventionToolStripMenuItem1.Text = "Intervention";
+            this.interventionToolStripMenuItem1.Click += new System.EventHandler(this.interventionToolStripMenuItem1_Click);
             // 
             // Principale
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1001, 591);
+            this.ClientSize = new System.Drawing.Size(1061, 590);
             this.Controls.Add(this.menuStrip1);
-            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Principale";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "GestionMatos";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Principale_FormClosed);
             this.Load += new System.EventHandler(this.Principale_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
