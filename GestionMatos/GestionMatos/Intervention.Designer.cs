@@ -62,67 +62,61 @@ namespace GestionMatos
             // date
             // 
             this.date.AutoSize = true;
-            this.date.Location = new System.Drawing.Point(576, 158);
-            this.date.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.date.Location = new System.Drawing.Point(864, 243);
             this.date.Name = "date";
-            this.date.Size = new System.Drawing.Size(97, 13);
+            this.date.Size = new System.Drawing.Size(142, 20);
             this.date.TabIndex = 0;
             this.date.Text = "Date intervention : ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(576, 199);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(864, 306);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 13);
+            this.label2.Size = new System.Drawing.Size(116, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Commentaire : ";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(576, 324);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(864, 498);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 13);
+            this.label3.Size = new System.Drawing.Size(73, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Materiel :";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // dateIntr
             // 
-            this.dateIntr.Location = new System.Drawing.Point(674, 156);
-            this.dateIntr.Margin = new System.Windows.Forms.Padding(2);
+            this.dateIntr.Location = new System.Drawing.Point(1011, 240);
             this.dateIntr.Name = "dateIntr";
-            this.dateIntr.Size = new System.Drawing.Size(223, 20);
+            this.dateIntr.Size = new System.Drawing.Size(332, 26);
             this.dateIntr.TabIndex = 4;
             // 
             // textComment
             // 
-            this.textComment.Location = new System.Drawing.Point(674, 197);
-            this.textComment.Margin = new System.Windows.Forms.Padding(2);
+            this.textComment.Location = new System.Drawing.Point(1011, 303);
             this.textComment.Multiline = true;
             this.textComment.Name = "textComment";
-            this.textComment.Size = new System.Drawing.Size(329, 109);
+            this.textComment.Size = new System.Drawing.Size(492, 166);
             this.textComment.TabIndex = 6;
+            this.textComment.TextChanged += new System.EventHandler(this.textComment_TextChanged);
             // 
             // comboMateriel
             // 
             this.comboMateriel.FormattingEnabled = true;
-            this.comboMateriel.Location = new System.Drawing.Point(674, 322);
-            this.comboMateriel.Margin = new System.Windows.Forms.Padding(2);
+            this.comboMateriel.Location = new System.Drawing.Point(1011, 495);
             this.comboMateriel.Name = "comboMateriel";
-            this.comboMateriel.Size = new System.Drawing.Size(329, 21);
+            this.comboMateriel.Size = new System.Drawing.Size(492, 28);
             this.comboMateriel.TabIndex = 7;
             this.comboMateriel.SelectedIndexChanged += new System.EventHandler(this.comboMateriel_SelectedIndexChanged);
             // 
             // btn_ajouter
             // 
-            this.btn_ajouter.Location = new System.Drawing.Point(674, 398);
-            this.btn_ajouter.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_ajouter.Location = new System.Drawing.Point(1011, 612);
             this.btn_ajouter.Name = "btn_ajouter";
-            this.btn_ajouter.Size = new System.Drawing.Size(68, 27);
+            this.btn_ajouter.Size = new System.Drawing.Size(102, 42);
             this.btn_ajouter.TabIndex = 8;
             this.btn_ajouter.Text = "Ajouter";
             this.btn_ajouter.UseVisualStyleBackColor = true;
@@ -130,10 +124,9 @@ namespace GestionMatos
             // 
             // btn_modifier
             // 
-            this.btn_modifier.Location = new System.Drawing.Point(752, 398);
-            this.btn_modifier.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_modifier.Location = new System.Drawing.Point(1128, 612);
             this.btn_modifier.Name = "btn_modifier";
-            this.btn_modifier.Size = new System.Drawing.Size(68, 27);
+            this.btn_modifier.Size = new System.Drawing.Size(102, 42);
             this.btn_modifier.TabIndex = 9;
             this.btn_modifier.Text = "Modifier";
             this.btn_modifier.UseVisualStyleBackColor = true;
@@ -141,52 +134,48 @@ namespace GestionMatos
             // 
             // btn_supp
             // 
-            this.btn_supp.Location = new System.Drawing.Point(828, 398);
-            this.btn_supp.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_supp.Location = new System.Drawing.Point(1242, 612);
             this.btn_supp.Name = "btn_supp";
-            this.btn_supp.Size = new System.Drawing.Size(68, 28);
+            this.btn_supp.Size = new System.Drawing.Size(102, 43);
             this.btn_supp.TabIndex = 10;
             this.btn_supp.Text = "Supprimer";
             this.btn_supp.UseVisualStyleBackColor = true;
+            this.btn_supp.Click += new System.EventHandler(this.btn_supp_Click);
             // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(8, 16);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView2.Location = new System.Drawing.Point(12, 25);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 62;
             this.dataGridView2.RowTemplate.Height = 28;
-            this.dataGridView2.Size = new System.Drawing.Size(557, 444);
+            this.dataGridView2.Size = new System.Drawing.Size(836, 683);
             this.dataGridView2.TabIndex = 12;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // comboClient
             // 
             this.comboClient.FormattingEnabled = true;
-            this.comboClient.Location = new System.Drawing.Point(674, 365);
-            this.comboClient.Margin = new System.Windows.Forms.Padding(2);
+            this.comboClient.Location = new System.Drawing.Point(1011, 562);
             this.comboClient.Name = "comboClient";
-            this.comboClient.Size = new System.Drawing.Size(329, 21);
+            this.comboClient.Size = new System.Drawing.Size(492, 28);
             this.comboClient.TabIndex = 13;
             // 
             // Client
             // 
             this.Client.AutoSize = true;
-            this.Client.Location = new System.Drawing.Point(576, 367);
-            this.Client.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Client.Location = new System.Drawing.Point(864, 565);
             this.Client.Name = "Client";
-            this.Client.Size = new System.Drawing.Size(39, 13);
+            this.Client.Size = new System.Drawing.Size(57, 20);
             this.Client.TabIndex = 15;
             this.Client.Text = "Client :";
             // 
             // etat
             // 
             this.etat.AutoSize = true;
-            this.etat.Location = new System.Drawing.Point(802, 77);
-            this.etat.Margin = new System.Windows.Forms.Padding(2);
+            this.etat.Location = new System.Drawing.Point(1203, 118);
             this.etat.Name = "etat";
-            this.etat.Size = new System.Drawing.Size(44, 17);
+            this.etat.Size = new System.Drawing.Size(64, 24);
             this.etat.TabIndex = 29;
             this.etat.Text = "Etat";
             this.etat.UseVisualStyleBackColor = true;
@@ -194,10 +183,9 @@ namespace GestionMatos
             // clie
             // 
             this.clie.AutoSize = true;
-            this.clie.Location = new System.Drawing.Point(802, 47);
-            this.clie.Margin = new System.Windows.Forms.Padding(2);
+            this.clie.Location = new System.Drawing.Point(1203, 72);
             this.clie.Name = "clie";
-            this.clie.Size = new System.Drawing.Size(90, 17);
+            this.clie.Size = new System.Drawing.Size(130, 24);
             this.clie.TabIndex = 28;
             this.clie.Text = "Nom de client";
             this.clie.UseVisualStyleBackColor = true;
@@ -206,10 +194,9 @@ namespace GestionMatos
             // 
             this.mat.AutoSize = true;
             this.mat.Checked = true;
-            this.mat.Location = new System.Drawing.Point(802, 18);
-            this.mat.Margin = new System.Windows.Forms.Padding(2);
+            this.mat.Location = new System.Drawing.Point(1203, 28);
             this.mat.Name = "mat";
-            this.mat.Size = new System.Drawing.Size(86, 17);
+            this.mat.Size = new System.Drawing.Size(127, 24);
             this.mat.TabIndex = 27;
             this.mat.TabStop = true;
             this.mat.Text = "Nom materiel";
@@ -218,28 +205,25 @@ namespace GestionMatos
             // 
             // textCher
             // 
-            this.textCher.Location = new System.Drawing.Point(667, 16);
-            this.textCher.Margin = new System.Windows.Forms.Padding(2);
+            this.textCher.Location = new System.Drawing.Point(1000, 25);
             this.textCher.Name = "textCher";
-            this.textCher.Size = new System.Drawing.Size(122, 20);
+            this.textCher.Size = new System.Drawing.Size(181, 26);
             this.textCher.TabIndex = 26;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(576, 18);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(864, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 13);
+            this.label1.Size = new System.Drawing.Size(86, 20);
             this.label1.TabIndex = 31;
             this.label1.Text = "Chercher : ";
             // 
             // chercher_btn
             // 
-            this.chercher_btn.Location = new System.Drawing.Point(934, 18);
-            this.chercher_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.chercher_btn.Location = new System.Drawing.Point(1401, 28);
             this.chercher_btn.Name = "chercher_btn";
-            this.chercher_btn.Size = new System.Drawing.Size(68, 28);
+            this.chercher_btn.Size = new System.Drawing.Size(102, 43);
             this.chercher_btn.TabIndex = 32;
             this.chercher_btn.Text = "Chercher";
             this.chercher_btn.UseVisualStyleBackColor = true;
@@ -248,10 +232,9 @@ namespace GestionMatos
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(576, 120);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(864, 185);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(26, 13);
+            this.label4.Size = new System.Drawing.Size(39, 20);
             this.label4.TabIndex = 33;
             this.label4.Text = "Etat";
             // 
@@ -262,10 +245,9 @@ namespace GestionMatos
             "En cours",
             "A faire",
             "Terminé"});
-            this.comboEtat.Location = new System.Drawing.Point(674, 118);
-            this.comboEtat.Margin = new System.Windows.Forms.Padding(2);
+            this.comboEtat.Location = new System.Drawing.Point(1011, 182);
             this.comboEtat.Name = "comboEtat";
-            this.comboEtat.Size = new System.Drawing.Size(223, 21);
+            this.comboEtat.Size = new System.Drawing.Size(332, 28);
             this.comboEtat.TabIndex = 35;
             // 
             // errorProvider1
@@ -282,9 +264,9 @@ namespace GestionMatos
             // 
             // Intervention
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1169, 481);
+            this.ClientSize = new System.Drawing.Size(1754, 740);
             this.Controls.Add(this.comboEtat);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.chercher_btn);
@@ -306,7 +288,6 @@ namespace GestionMatos
             this.Controls.Add(this.label2);
             this.Controls.Add(this.date);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Intervention";
             this.Text = "Intervention";
             this.Load += new System.EventHandler(this.Intervention_Load);

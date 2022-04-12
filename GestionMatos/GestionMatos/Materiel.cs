@@ -28,7 +28,7 @@ namespace GestionMatos
         private void Materiel_Load(object sender, EventArgs e)
         {
             Sql.Connect();
-            SqlDataAdapter sda = new SqlDataAdapter("Select idMat Id, nomMat 'nom de materiél', nSerieMat 'numéro de série', MTBFMat 'matiére de fabrication',Date_Installation 'Date de installation' From Materiel", Sql.Conn);
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT idMat, nomMat, nSerieMat, Date_Installation, nomType FROM Materiel LEFT JOIN typeMateriel ON Materiel.id_TypeMat = typeMateriel.idType;", Sql.Conn);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             dataGridView1.DataSource = dt;
@@ -57,9 +57,9 @@ namespace GestionMatos
                 //populate the textbox from specific value of the coordinates of column and row.
                 textBox1.Text = row.Cells[1].Value.ToString();
                 textBox2.Text = row.Cells[2].Value.ToString();
-                textBox3.Text = row.Cells[3].Value.ToString();
+                textBox3.Text = row.Cells[4].Value.ToString();
                 ///textBox4.Text = row.Cells[5].Value.ToString();
-                dateTimePicker1.Text = row.Cells[4].Value.ToString();
+                dateTimePicker1.Text = row.Cells[3].Value.ToString();
             }
         }
         

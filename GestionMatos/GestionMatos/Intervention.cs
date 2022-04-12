@@ -29,6 +29,8 @@ namespace GestionMatos
         SqlConn Sql = new SqlConn();
         private void Intervention_Load(object sender, EventArgs e)
         {
+            comboMateriel.Items.Clear();
+            comboClient.Items.Clear();
         
             Sql.Connect();
             string req = "SELECT idInter, datePlanifie, nomMat, Etat, nomClient, Intervention.idMat, Intervention.id_Client,Commentaire FROM Intervention LEFT JOIN Materiel ON Intervention.idMat = Materiel.idMat LEFT JOIN Client ON Intervention.id_Client = Client.idClient";
@@ -41,7 +43,7 @@ namespace GestionMatos
             }
            
             dataGridView2.DataSource = dt;
-            //dataGridView2.Columns[0].Visible = false;
+            dataGridView2.Columns[0].Visible = false;
             dataGridView2.Columns[5].Visible = false;//idMAt
             dataGridView2.Columns[6].Visible = false;
             //checkbox
@@ -100,7 +102,12 @@ namespace GestionMatos
 
             int idma = (int)myk;
             int idc = (int)mykc;
-            string query = $"INSERT INTO Intervention VALUES ('{dateIntr.Value}','{textComment.Text}',{myk},'{mykc}','{comboEtat.Text}');";
+            //pour l'apstrophe dans le commentaire
+            string s = textComment.Text;
+            string escaped = s.Replace("'", "''");
+            ///
+
+            string query = $"INSERT INTO Intervention VALUES ('{dateIntr.Value}','{escaped}',{myk},'{mykc}','{comboEtat.Text}');";
             Sql.Connect();
             SqlCommand cmd = new SqlCommand(query, Sql.Conn);
             cmd.ExecuteNonQuery();
@@ -170,6 +177,40 @@ namespace GestionMatos
             int rowindex = dataGridView2.CurrentCell.RowIndex;
             //idIntervention
             var t = inter[rowindex][0];
+
+            string dicmat = comboMateriel.Text;
+            string diccli = comboClient.Text;
+            var myk = idmatdic.FirstOrDefault(x => x.Value == dicmat).Key;
+            var mykc = idcldic.FirstOrDefault(x => x.Value == diccli).Key;
+
+            int idma = (int)myk;
+            int idc = (int)mykc;
+
+            string query = $"update Intervention set datePlanifie='{dateIntr.Value}',Commentaire='{textComment.Text}',idMat={myk}, id_Client={mykc},Etat='{comboEtat.Text}'where idInter ={t};";
+            Sql.Connect();
+            SqlCommand cmd = new SqlCommand(query, Sql.Conn);
+            cmd.ExecuteNonQuery();
+            Sql.disconnect();
+            MessageBox.Show("Intervention bien Modifier !");
+            Intervention_Load(sender, e);
+        }
+
+        private void btn_supp_Click(object sender, EventArgs e)
+        {
+            int rowindex = dataGridView2.CurrentCell.RowIndex;
+            //idIntervention
+            var t = inter[rowindex][0];
+            string query = $"Delete from intervention where idInter={t};";
+            Sql.Connect();
+            SqlCommand cmd = new SqlCommand(query, Sql.Conn);
+            cmd.ExecuteNonQuery();
+            Sql.disconnect();
+            MessageBox.Show("Intervention supprimer");
+            Intervention_Load(sender, e);
+        }
+
+        private void textComment_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

@@ -25,9 +25,11 @@ Thumbs.db
 *.lib
 *.sbr
 obj/
+GestionMatos/GestionMatos/obj/
 [Rr]elease*/
 _ReSharper*/
 [Tt]est[Rr]esult*
 .vs/
 #Nuget packages folder
 packages/
+

@@ -122,9 +122,9 @@ namespace GestionMatos
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(770, 386);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(162, 20);
+            this.label3.Size = new System.Drawing.Size(118, 20);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Matière de fabrication";
+            this.label3.Text = "Type de produit";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
@@ -225,10 +225,10 @@ namespace GestionMatos
             this.mat.AutoSize = true;
             this.mat.Location = new System.Drawing.Point(1198, 63);
             this.mat.Name = "mat";
-            this.mat.Size = new System.Drawing.Size(127, 24);
+            this.mat.Size = new System.Drawing.Size(150, 24);
             this.mat.TabIndex = 22;
             this.mat.TabStop = true;
-            this.mat.Text = "Nom materiel";
+            this.mat.Text = "Type de materiel";
             this.mat.UseVisualStyleBackColor = true;
             this.mat.CheckedChanged += new System.EventHandler(this.mat_CheckedChanged);
             // 
@@ -249,10 +249,10 @@ namespace GestionMatos
             this.fab.AutoSize = true;
             this.fab.Location = new System.Drawing.Point(1198, 154);
             this.fab.Name = "fab";
-            this.fab.Size = new System.Drawing.Size(187, 24);
+            this.fab.Size = new System.Drawing.Size(149, 24);
             this.fab.TabIndex = 24;
             this.fab.TabStop = true;
-            this.fab.Text = "Matière de fabrication";
+            this.fab.Text = "Nom de materiél";
             this.fab.UseVisualStyleBackColor = true;
             this.fab.CheckedChanged += new System.EventHandler(this.fab_CheckedChanged);
             // 
