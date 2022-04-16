@@ -39,7 +39,7 @@ namespace GestionMatos
         {
             this.Decolor();
             clientToolStripMenuItem.BackColor = SystemColors.ControlDark;
-            Clients c = new Clients();
+            ClientDt c = new ClientDt();
             this.IsMdiContainer = true;
             c.MdiParent = this;
             c.Dock = DockStyle.Fill;
@@ -50,12 +50,12 @@ namespace GestionMatos
         {
             this.Decolor();
             typeToolStripMenuItem1.BackColor = SystemColors.ControlDark;
+            Type t = new Type();
 
-            Login l = new Login();
             this.IsMdiContainer = true;
-            l.MdiParent = this;
-            l.Dock = DockStyle.Fill;
-            l.Show();
+            t.MdiParent = this;
+            t.Dock = DockStyle.Fill;
+            t.Show();
         }
 
         private void matérielToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -73,7 +73,7 @@ namespace GestionMatos
         private void Principale_Load(object sender, EventArgs e)
         {
             this.Decolor();
-            Clients c = new Clients();
+            ClientDt c = new ClientDt();
             this.IsMdiContainer = true;
             c.MdiParent = this;
             c.Dock = DockStyle.Fill;

@@ -173,17 +173,17 @@ namespace GestionMatos
             // etat
             // 
             this.etat.AutoSize = true;
-            this.etat.Location = new System.Drawing.Point(1203, 118);
+            this.etat.Location = new System.Drawing.Point(983, 118);
             this.etat.Name = "etat";
-            this.etat.Size = new System.Drawing.Size(64, 24);
+            this.etat.Size = new System.Drawing.Size(243, 36);
             this.etat.TabIndex = 29;
-            this.etat.Text = "Etat";
+            this.etat.Text = "Etat d\'intervention";
             this.etat.UseVisualStyleBackColor = true;
             // 
             // clie
             // 
             this.clie.AutoSize = true;
-            this.clie.Location = new System.Drawing.Point(1203, 72);
+            this.clie.Location = new System.Drawing.Point(983, 72);
             this.clie.Name = "clie";
             this.clie.Size = new System.Drawing.Size(130, 24);
             this.clie.TabIndex = 28;
@@ -194,7 +194,7 @@ namespace GestionMatos
             // 
             this.mat.AutoSize = true;
             this.mat.Checked = true;
-            this.mat.Location = new System.Drawing.Point(1203, 28);
+            this.mat.Location = new System.Drawing.Point(983, 25);
             this.mat.Name = "mat";
             this.mat.Size = new System.Drawing.Size(127, 24);
             this.mat.TabIndex = 27;
@@ -205,9 +205,9 @@ namespace GestionMatos
             // 
             // textCher
             // 
-            this.textCher.Location = new System.Drawing.Point(1000, 25);
+            this.textCher.Location = new System.Drawing.Point(1128, 28);
             this.textCher.Name = "textCher";
-            this.textCher.Size = new System.Drawing.Size(181, 26);
+            this.textCher.Size = new System.Drawing.Size(247, 26);
             this.textCher.TabIndex = 26;
             // 
             // label1
@@ -215,9 +215,10 @@ namespace GestionMatos
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(864, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 20);
+            this.label1.Size = new System.Drawing.Size(152, 30);
             this.label1.TabIndex = 31;
-            this.label1.Text = "Chercher : ";
+            this.label1.Text = "Chercher par";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // chercher_btn
             // 
@@ -234,9 +235,9 @@ namespace GestionMatos
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(864, 185);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 20);
+            this.label4.Size = new System.Drawing.Size(218, 30);
             this.label4.TabIndex = 33;
-            this.label4.Text = "Etat";
+            this.label4.Text = "Etat d\'intervention :";
             // 
             // comboEtat
             // 
@@ -267,13 +268,13 @@ namespace GestionMatos
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1754, 740);
+            this.Controls.Add(this.mat);
             this.Controls.Add(this.comboEtat);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.chercher_btn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.etat);
             this.Controls.Add(this.clie);
-            this.Controls.Add(this.mat);
             this.Controls.Add(this.textCher);
             this.Controls.Add(this.Client);
             this.Controls.Add(this.comboClient);

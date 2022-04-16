@@ -40,6 +40,7 @@ namespace GestionMatos
             // 
             // menuStrip1
             // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.clientToolStripMenuItem,
@@ -50,7 +51,7 @@ namespace GestionMatos
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.menuStrip1.Size = new System.Drawing.Size(1061, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1061, 36);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -60,21 +61,21 @@ namespace GestionMatos
             // 
             this.clientToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control;
             this.clientToolStripMenuItem.Name = "clientToolStripMenuItem";
-            this.clientToolStripMenuItem.Size = new System.Drawing.Size(69, 29);
+            this.clientToolStripMenuItem.Size = new System.Drawing.Size(69, 32);
             this.clientToolStripMenuItem.Text = "client";
             this.clientToolStripMenuItem.Click += new System.EventHandler(this.clientToolStripMenuItem_Click);
             // 
             // typeToolStripMenuItem1
             // 
             this.typeToolStripMenuItem1.Name = "typeToolStripMenuItem1";
-            this.typeToolStripMenuItem1.Size = new System.Drawing.Size(65, 29);
+            this.typeToolStripMenuItem1.Size = new System.Drawing.Size(65, 32);
             this.typeToolStripMenuItem1.Text = "Type";
             this.typeToolStripMenuItem1.Click += new System.EventHandler(this.typeToolStripMenuItem1_Click);
             // 
             // siteToolStripMenuItem
             // 
             this.siteToolStripMenuItem.Name = "siteToolStripMenuItem";
-            this.siteToolStripMenuItem.Size = new System.Drawing.Size(57, 29);
+            this.siteToolStripMenuItem.Size = new System.Drawing.Size(57, 32);
             this.siteToolStripMenuItem.Text = "Site";
             this.siteToolStripMenuItem.Click += new System.EventHandler(this.siteToolStripMenuItem_Click);
             // 
@@ -82,14 +83,14 @@ namespace GestionMatos
             // 
             this.matérielToolStripMenuItem1.BackColor = System.Drawing.SystemColors.Control;
             this.matérielToolStripMenuItem1.Name = "matérielToolStripMenuItem1";
-            this.matérielToolStripMenuItem1.Size = new System.Drawing.Size(91, 29);
+            this.matérielToolStripMenuItem1.Size = new System.Drawing.Size(91, 32);
             this.matérielToolStripMenuItem1.Text = "Matériel";
             this.matérielToolStripMenuItem1.Click += new System.EventHandler(this.matérielToolStripMenuItem1_Click);
             // 
             // interventionToolStripMenuItem1
             // 
             this.interventionToolStripMenuItem1.Name = "interventionToolStripMenuItem1";
-            this.interventionToolStripMenuItem1.Size = new System.Drawing.Size(123, 29);
+            this.interventionToolStripMenuItem1.Size = new System.Drawing.Size(123, 32);
             this.interventionToolStripMenuItem1.Text = "Intervention";
             this.interventionToolStripMenuItem1.Click += new System.EventHandler(this.interventionToolStripMenuItem1_Click);
             // 
@@ -98,6 +99,7 @@ namespace GestionMatos
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
             this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1061, 590);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
