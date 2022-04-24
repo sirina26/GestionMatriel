@@ -123,7 +123,7 @@ namespace GestionMatos
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
+            try
             {
                 //gets a collection that contains all the rows
                 DataGridViewRow row = this.dataGridView2.Rows[e.RowIndex];
@@ -133,6 +133,10 @@ namespace GestionMatos
                 textComment.Text = row.Cells[7].Value.ToString();
                 comboClient.Text = row.Cells[4].Value.ToString();
                 comboEtat.Text = row.Cells[3].Value.ToString();
+            }
+            catch (Exception exp)
+            {
+
             }
         }
 

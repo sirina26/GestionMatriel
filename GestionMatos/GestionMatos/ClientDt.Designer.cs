@@ -40,7 +40,7 @@ namespace GestionMatos
             this.label1 = new System.Windows.Forms.Label();
             this.textBox_nom = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.radioButton_nbr = new System.Windows.Forms.RadioButton();
+            this.radioButton_mail = new System.Windows.Forms.RadioButton();
             this.radioButton_nom = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
             this.text_chercher = new System.Windows.Forms.TextBox();
@@ -49,7 +49,7 @@ namespace GestionMatos
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton_nbrtel = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
@@ -153,19 +153,20 @@ namespace GestionMatos
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.Size = new System.Drawing.Size(543, 526);
             this.dataGridView1.TabIndex = 21;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // radioButton_nbr
+            // radioButton_mail
             // 
-            this.radioButton_nbr.AutoSize = true;
-            this.radioButton_nbr.Location = new System.Drawing.Point(735, 128);
-            this.radioButton_nbr.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.radioButton_nbr.Name = "radioButton_nbr";
-            this.radioButton_nbr.Size = new System.Drawing.Size(62, 24);
-            this.radioButton_nbr.TabIndex = 31;
-            this.radioButton_nbr.TabStop = true;
-            this.radioButton_nbr.Text = "Mail";
-            this.radioButton_nbr.UseVisualStyleBackColor = true;
+            this.radioButton_mail.AutoSize = true;
+            this.radioButton_mail.Location = new System.Drawing.Point(735, 128);
+            this.radioButton_mail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radioButton_mail.Name = "radioButton_mail";
+            this.radioButton_mail.Size = new System.Drawing.Size(62, 24);
+            this.radioButton_mail.TabIndex = 31;
+            this.radioButton_mail.TabStop = true;
+            this.radioButton_mail.Text = "Mail";
+            this.radioButton_mail.UseVisualStyleBackColor = true;
             // 
             // radioButton_nom
             // 
@@ -206,6 +207,7 @@ namespace GestionMatos
             this.chercher_btn.TabIndex = 32;
             this.chercher_btn.Text = "Chercher";
             this.chercher_btn.UseVisualStyleBackColor = true;
+            this.chercher_btn.Click += new System.EventHandler(this.chercher_btn_Click);
             // 
             // errorProvider1
             // 
@@ -223,26 +225,27 @@ namespace GestionMatos
             // 
             this.errorProvider4.ContainerControl = this;
             // 
-            // radioButton1
+            // radioButton_nbrtel
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(735, 162);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(187, 24);
-            this.radioButton1.TabIndex = 33;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Numéro de téléphone";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton_nbrtel.AutoSize = true;
+            this.radioButton_nbrtel.Location = new System.Drawing.Point(735, 162);
+            this.radioButton_nbrtel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radioButton_nbrtel.Name = "radioButton_nbrtel";
+            this.radioButton_nbrtel.Size = new System.Drawing.Size(187, 24);
+            this.radioButton_nbrtel.TabIndex = 33;
+            this.radioButton_nbrtel.TabStop = true;
+            this.radioButton_nbrtel.Text = "Numéro de téléphone";
+            this.radioButton_nbrtel.UseVisualStyleBackColor = true;
             // 
             // ClientDt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1245, 583);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.radioButton_nbrtel);
             this.Controls.Add(this.chercher_btn);
-            this.Controls.Add(this.radioButton_nbr);
+            this.Controls.Add(this.radioButton_mail);
             this.Controls.Add(this.radioButton_nom);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.text_chercher);
@@ -282,7 +285,7 @@ namespace GestionMatos
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox_nom;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.RadioButton radioButton_nbr;
+        private System.Windows.Forms.RadioButton radioButton_mail;
         private System.Windows.Forms.RadioButton radioButton_nom;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox text_chercher;
@@ -291,6 +294,6 @@ namespace GestionMatos
         private System.Windows.Forms.ErrorProvider errorProvider2;
         private System.Windows.Forms.ErrorProvider errorProvider3;
         private System.Windows.Forms.ErrorProvider errorProvider4;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton_nbrtel;
     }
 }

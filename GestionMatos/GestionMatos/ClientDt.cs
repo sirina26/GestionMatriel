@@ -22,20 +22,18 @@ namespace GestionMatos
         List<DataRow> listClie = new List<DataRow>();
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            dataGridView1.Refresh();
-            textBox_nom.Refresh();
-            textBox_mail.Refresh();
-
-            //if (e.RowIndex >= 0)
-            //{
-                //gets a collection that contains all the rows
+            try {
                 DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
-                //populate the textbox from specific value of the coordinates of column and row.
                 textBox_nom.Text = row.Cells[1].Value.ToString();
                 textBox_mail.Text = row.Cells[2].Value.ToString();
-                textBox_tel.Text = row.Cells[3].Value.ToString();             
-            //}
+                textBox_tel.Text = row.Cells[3].Value.ToString();
+            }
+            catch (Exception Ex)
+            {
+
+            }
         }
+            
         public bool Verif()
         {
             string nomCl = textBox_nom.Text;
@@ -124,7 +122,6 @@ namespace GestionMatos
         private void btn_supp_Click(object sender, EventArgs e)
         {
             int rowindex = dataGridView1.CurrentCell.RowIndex;
-            //idIntervention
             var t = listClie[rowindex][0];
             string query = $"Delete from Client where idClient={t};";
             Sql.Connect();
@@ -133,6 +130,42 @@ namespace GestionMatos
             Sql.disconnect();
             MessageBox.Show("Client supprimer");
             ClientDt_Load(sender, e);
+        }
+
+        private void chercher_btn_Click(object sender, EventArgs e)
+        {
+
+            if (text_chercher.Text == "")
+            {
+                ClientDt_Load(sender, e);
+                return;
+            }
+            Sql.Connect();
+
+            //var type = (int)idTypedic.FirstOrDefault(x => x.Value == textBoxChercher.Text).Key;
+
+            string check = "nomClient";
+
+            if (radioButton_nom.Checked)
+            {
+                check = "nomClient";
+            }
+            else if (radioButton_mail.Checked)
+            {
+                check = "mailClient";
+            }
+            else if (radioButton_nbrtel.Checked)
+            {
+                check = "telClient";
+            }
+            string st = text_chercher.Text;
+            string req = "SELECT idClient, nomClient 'Nom de Client', mailClient 'Mail de Client', telClient 'Numéro de téléphone' From Client where " + check + " like('" + st + "%');";
+            SqlDataAdapter sda = new SqlDataAdapter(req, Sql.Conn);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+            dataGridView1.DataSource = dt;
+            Sql.disconnect();
         }
     }
 }

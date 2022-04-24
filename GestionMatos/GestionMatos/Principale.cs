@@ -98,6 +98,7 @@ namespace GestionMatos
             typeToolStripMenuItem1.BackColor = SystemColors.Control;
             siteToolStripMenuItem.BackColor = SystemColors.Control;
             matérielToolStripMenuItem1.BackColor = SystemColors.Control;
+            marqueToolStripMenuItem.BackColor = SystemColors.Control;
         }
         private void Principale_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -121,6 +122,18 @@ namespace GestionMatos
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
             menuStrip1.Renderer = new ToolStripProfessionalRenderer(new TestColorTable());
+        }
+
+        private void marqueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Decolor();
+            marqueToolStripMenuItem.BackColor = SystemColors.ControlDark;
+            Marque intr = new Marque();
+            this.IsMdiContainer = true;
+            intr.MdiParent = this;
+            intr.Dock = DockStyle.Fill;
+            intr.Show();
+
         }
     }
 }

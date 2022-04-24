@@ -98,6 +98,12 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Marque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Marque.Designer.cs">
+      <DependentUpon>Marque.cs</DependentUpon>
+    </Compile>
     <Compile Include="Materiel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Marque.resx">
+      <DependentUpon>Marque.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Materiel.resx">
       <DependentUpon>Materiel.cs</DependentUpon>

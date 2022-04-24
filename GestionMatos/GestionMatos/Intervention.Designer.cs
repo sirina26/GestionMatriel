@@ -151,6 +151,7 @@ namespace GestionMatos
             this.dataGridView2.RowTemplate.Height = 28;
             this.dataGridView2.Size = new System.Drawing.Size(836, 683);
             this.dataGridView2.TabIndex = 12;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // comboClient
@@ -175,7 +176,7 @@ namespace GestionMatos
             this.etat.AutoSize = true;
             this.etat.Location = new System.Drawing.Point(983, 118);
             this.etat.Name = "etat";
-            this.etat.Size = new System.Drawing.Size(243, 36);
+            this.etat.Size = new System.Drawing.Size(162, 24);
             this.etat.TabIndex = 29;
             this.etat.Text = "Etat d\'intervention";
             this.etat.UseVisualStyleBackColor = true;
@@ -215,7 +216,7 @@ namespace GestionMatos
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(864, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 30);
+            this.label1.Size = new System.Drawing.Size(101, 20);
             this.label1.TabIndex = 31;
             this.label1.Text = "Chercher par";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -235,7 +236,7 @@ namespace GestionMatos
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(864, 185);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(218, 30);
+            this.label4.Size = new System.Drawing.Size(145, 20);
             this.label4.TabIndex = 33;
             this.label4.Text = "Etat d\'intervention :";
             // 
